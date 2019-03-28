@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2082BB</color>
+    <color name="colorPrimaryDark">#238ECC</color>
+    <color name="colorAccent">#6E0CE8</color>
+    <color name="grey">#F0F0F0</color>
+    <color name="legacy_icon_background">#2082ba</color>
+</resources>

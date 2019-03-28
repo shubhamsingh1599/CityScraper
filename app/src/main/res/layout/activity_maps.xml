@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".MapsActivity">
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity" />
+
+
+    <EditText
+        android:id="@+id/autocomplete_fragment"
+        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+        android:layout_width="372dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/grey"
+        android:hint="Search"
+        android:onClick="onMapSearch"
+        android:paddingLeft="58sp"
+        android:paddingRight="58sp"
+        android:singleLine="true"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/map"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="@+id/map"
+        app:layout_constraintTop_toTopOf="@+id/map" />
+
+    <ImageButton
+        android:id="@+id/menu"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/grey"
+        android:onClick="men"
+        android:src="@android:drawable/ic_menu_sort_by_size"
+        app:layout_constraintBottom_toBottomOf="@+id/autocomplete_fragment"
+        app:layout_constraintEnd_toStartOf="@+id/chat"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/autocomplete_fragment"
+        app:layout_constraintTop_toTopOf="@+id/autocomplete_fragment"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/chat"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/grey"
+        android:src="@android:drawable/ic_menu_search"
+        app:layout_constraintBottom_toBottomOf="@+id/autocomplete_fragment"
+        app:layout_constraintEnd_toEndOf="@+id/autocomplete_fragment"
+        app:layout_constraintTop_toTopOf="@+id/autocomplete_fragment"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/nearby"
+        android:layout_width="387dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#2a2e41"
+        android:ems="10"
+        android:onClick="nearby"
+        app:layout_constraintBottom_toBottomOf="@+id/map"
+        app:layout_constraintEnd_toEndOf="@+id/map"
+        app:layout_constraintStart_toStartOf="@+id/map"
+        app:layout_constraintTop_toBottomOf="@+id/autocomplete_fragment"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/Nearby"
+        android:layout_width="83dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:text="Nearby"
+        android:textColor="@color/grey"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/nearby"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="@+id/nearby"
+        app:layout_constraintTop_toTopOf="@+id/nearby" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="237dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Your crime reporting network"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="@+id/nearby"
+        app:layout_constraintEnd_toEndOf="@+id/nearby"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toStartOf="@+id/nearby"
+        app:layout_constraintTop_toBottomOf="@+id/Nearby" />
+
+
+</android.support.constraint.ConstraintLayout>
